@@ -1,0 +1,30 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  .total-score {
+    display: flex;
+    flex: 1;
+
+    span {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .reset-button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
