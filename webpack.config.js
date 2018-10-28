@@ -47,6 +47,5 @@ module.exports = {
       }
     ]
   },
-  mode: 'development',
   plugins: [new HtmlWebpackPlugin({ template: indexHtml }), new FlowWebpackPlugin()]
 };
