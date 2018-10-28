@@ -1,9 +1,14 @@
+// @flow
 import React from 'react';
 
-const TotalScore = () => (
+type Props = {
+  totalScore: number
+};
+
+const TotalScore = ({ totalScore }: Props) => (
   <div className="total-score">
     <span>TOTAL</span>
-    <span>140</span>
+    <span>{totalScore}</span>
   </div>
 );
 

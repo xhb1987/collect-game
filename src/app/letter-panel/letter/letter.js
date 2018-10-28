@@ -1,22 +1,22 @@
+// @flow
 import React from 'react';
 import type { LetterItem } from '../../../state/types';
 import './styles.less';
 
 type Props = {
   letterItem: LetterItem,
-  selectItem: any
+  letterSelect: any,
+  index: number
 };
 
-const Letter = ({ letterItem, selectItem }: Props) => (
-  <div
-    role="button"
+const Letter = ({ letterItem, letterSelect, index }: Props) => (
+  <button
+    type="button"
     className="letter-item"
-    onClick={() => selectItem(letterItem)}
-    onKeyDown={() => selectItem(letterItem)}
-    tabIndex="0"
+    onClick={() => letterSelect(letterItem, index)}
   >
     <span>{letterItem.keyValue}</span>
-  </div>
+  </button>
 );
 
 export default Letter;

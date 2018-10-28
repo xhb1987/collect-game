@@ -6,9 +6,12 @@
     "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": ["error", "as-needed"],
     "comma-dangle": ["error", "never"],
-    "import/no-unresolved": [2, { "caseSensitive": false }]
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "linebreak-style": 0,
+    "global-require": 0
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   }
 }

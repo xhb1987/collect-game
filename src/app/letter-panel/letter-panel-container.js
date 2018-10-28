@@ -1,11 +1,13 @@
+// @flow
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-
 import type { Letter } from '../../state/letter-panel/types';
-
 import LetterPanel from './letter-panel';
 
-class Container extends PureComponent {
+type Props = {
+  lettersArray: Letter
+};
+class Container extends PureComponent<Props> {
   render() {
     return <LetterPanel {...this.props} />;
   }

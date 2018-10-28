@@ -1,7 +1,7 @@
-import type { LetterItem } from '../types';
+import type { PlayerItem } from '../types';
 
 export type Score = {
-  score: Array<LetterItem>,
-  bonus: number,
-  total: number
+  playerItems: Array<PlayerItem>,
+  bonuse: number,
+  totalScore: number
 };

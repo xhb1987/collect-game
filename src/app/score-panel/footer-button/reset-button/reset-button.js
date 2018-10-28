@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 
-const ResetButton = () => (
+type Props = {
+  startNewGame: any
+}
+
+const ResetButton = ({ startNewGame }: Props) => (
   <div className="reset-button">
-    <button type="button">New Game</button>
+    <button type="button" onClick={startNewGame}>New Game</button>
   </div>
 );
 

@@ -1,5 +1,24 @@
+@import 'variable';
+
 .score-list-container {
+  .score-item-scroll {
+    overflow: auto;
+    max-height: 20rem;
+  }
   .score-item {
-    padding: 10px;
+    padding: @padding-width;
+    display: flex;
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    .column {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  .place-holder{
+    color: gray;
+    padding: @padding-width;
+    text-align: center;
+    border-bottom: 1px solid black;
   }
 }

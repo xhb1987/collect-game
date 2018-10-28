@@ -1,14 +1,16 @@
+@import "variable";
+
 .footer-container {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: @padding-width;
   .total-score {
     display: flex;
     flex: 1;
-
+    flex-direction: column;
     span {
       &:first-child {
-        margin-right: 10px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -20,10 +22,17 @@
     justify-content: center;
 
     button {
-      background-color: transparent;
+      background-color: @primary;
+      font-weight: 700;
+      color: @white;
+      border: none;
+      border-radius: 3px;
+      padding: @padding-width;
+      transition: background 0.4s ease;
 
       &:hover {
         cursor: pointer;
+        background-color: @secondary;
       }
     }
   }

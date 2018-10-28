@@ -1,8 +1,17 @@
+// @flow
 import React from 'react';
 
-const ScoreItem = () => (
+import { PlayerItem } from '../../../../state/types';
+
+type Props = {
+  item: PlayerItem
+};
+
+const ScoreItem = ({ item }: Props) => (
   <div className="score-item">
-    <span>score item</span>
+    <div className="column">{item.keyValue}</div>
+    <div className="column">{item.qty}</div>
+    <div className="column">{item.score + item.bonuse}</div>
   </div>
 );
 

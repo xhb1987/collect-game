@@ -1,14 +1,16 @@
+// @flow
 import React from 'react';
 import { connect } from 'react-redux';
+import type { Dispatch } from 'redux';
 import Letter from './letter';
 import type { LetterItem } from '../../../state/types';
-import { selectItemAction } from '../../../state/letter-panel/actions';
+import { letterSelectAction } from '../../../state/actions';
 
 const Container = props => <Letter {...props} />;
 
 const stateToProps = () => ({});
-const dispatchToProps = dispatch => ({
-  selectItem: (item: LetterItem) => dispatch(selectItemAction(item))
+const dispatchToProps = (dispatch: Dispatch<any>) => ({
+  letterSelect: (item: LetterItem, index: number) => dispatch(letterSelectAction(item, index))
 });
 
 const LetterItemContainer = connect(

@@ -5,6 +5,13 @@ export type Action = {
 };
 
 export type LetterItem = {
-  letter: string,
-  value: number
+  keyValue: string,
+  point: number
+};
+
+export type PlayerItem = {
+  keyValue: string,
+  qty: number,
+  score: number,
+  bonuse: number
 };
