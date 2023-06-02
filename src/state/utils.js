@@ -1,12 +1,12 @@
-import { shuffle, has } from 'lodash';
-import type { LetterItem, PlayerItem } from './types';
-import { letterPoints, bonuseList } from './constants';
+import { shuffle, has } from "lodash";
+import { letterPoints, bonuseList } from "./constants";
 
-export const generateRandomId = (): string => `${Math.random().toString(36).substring(2, 15)}_${Math.random().toString(36).substring(2, 15)}`;
+export const generateRandomId = () =>
+  `${Math.random().toString(36).substring(2, 15)}_${Math.random()
+    .toString(36)
+    .substring(2, 15)}`;
 
-export const generateLetterArray = (startLetter: string, endLetter: string) => (
-  isRandom: boolean
-): Array<LetterItem> => {
+export const generateLetterArray = (startLetter, endLetter) => (isRandom) => {
   const tempLetterArray = [];
   const startLetterCharCode = startLetter.charCodeAt(0);
   const endLetterCharCode = endLetter.charCodeAt(0);
@@ -16,14 +16,14 @@ export const generateLetterArray = (startLetter: string, endLetter: string) => (
     tempLetterArray.push({
       keyValue: tempLetter,
       point: letterPoints[tempLetter],
-      id: generateRandomId()
+      id: generateRandomId(),
     });
   }
 
   return isRandom ? shuffle(tempLetterArray) : tempLetterArray;
 };
 
-export const getBonuse = (playerItem: PlayerItem): number => {
+export const getBonuse = (playerItem) => {
   const itemKey = playerItem.keyValue;
   if (has(bonuseList, itemKey)) {
     const bonuseItem = bonuseList[itemKey];
