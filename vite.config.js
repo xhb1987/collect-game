@@ -9,4 +9,13 @@ export default defineConfig({
     sourcemap: true,
     outDir: path.resolve(__dirname, "./dist"),
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        math: "always",
+        relativeUrls: true,
+        javascriptEnabled: true,
+      },
+    },
+  },
 });

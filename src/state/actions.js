@@ -1,24 +1,20 @@
-// @flow
-import type { Dispatch } from 'redux';
-import type { LetterItem } from './types';
-
 import {
   selectItemAction,
   updateLtterAction,
-  resetLetterPanelAction
-} from './letter-panel/actions';
+  resetLetterPanelAction,
+} from "./letter-panel/actions";
 import {
   updateScoreAction,
-  resetScorePanelAction
-} from './score-panel/actions';
+  resetScorePanelAction,
+} from "./score-panel/actions";
 
-export const letterSelectAction = (item: LetterItem, index: number) => (dispatch: Dispatch<*>) => {
+export const letterSelectAction = (item, index) => (dispatch) => {
   dispatch(selectItemAction(item));
   dispatch(updateLtterAction(item, index));
   dispatch(updateScoreAction(item));
 };
 
-export const startNewGameAction = () => (dispatch: Dispatch<any>) => {
+export const startNewGameAction = () => (dispatch) => {
   dispatch(resetLetterPanelAction());
   dispatch(resetScorePanelAction());
 };

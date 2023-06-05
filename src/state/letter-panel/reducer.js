@@ -1,21 +1,14 @@
-// @flow
-import type { Letter } from './types';
-import type Action from '../types';
+import { generateLetterArray } from "../utils";
 
-import { generateLetterArray } from '../utils';
+import { RESET_LETTER_PANEL, UPDATE_LETTER } from "./actions";
 
-import { RESET_LETTER_PANEL, UPDATE_LETTER } from './actions';
-
-const letterArrayAToFGeneration = generateLetterArray('A', 'F');
+const letterArrayAToFGeneration = generateLetterArray("A", "F");
 const isRandom = true;
 const initialState = {
-  letters: letterArrayAToFGeneration(isRandom)
+  letters: letterArrayAToFGeneration(isRandom),
 };
 
-const letterPanelReducer = (
-  state: Letter = initialState,
-  action: Action
-): Letter => {
+const letterPanelReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_LETTER: {
       const { index } = action.payload;
@@ -31,13 +24,13 @@ const letterPanelReducer = (
       );
 
       return Object.assign({}, state, {
-        letters: tempLetterArray.slice()
+        letters: tempLetterArray.slice(),
       });
     }
     case RESET_LETTER_PANEL: {
       const newLetterArray = letterArrayAToFGeneration(isRandom);
       return Object.assign({}, state, {
-        letters: newLetterArray
+        letters: newLetterArray,
       });
     }
     default:

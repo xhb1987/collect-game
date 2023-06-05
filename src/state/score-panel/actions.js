@@ -1,17 +1,14 @@
-// @flow
-import type { Action, LetterItem } from '../types';
+export const UPDATE_SCORE = "UPDATE_SCORE";
+export const RESET_SCORE_PANEL = "RESET_SCORE_PANEL";
 
-export const UPDATE_SCORE = 'UPDATE_SCORE';
-export const RESET_SCORE_PANEL = 'RESET_SCORE_PANEL';
-
-export const resetScorePanelAction = (): Action => ({
+export const resetScorePanelAction = () => ({
   type: RESET_SCORE_PANEL,
   payload: {},
-  meta: {}
+  meta: {},
 });
 
-export const updateScoreAction = (item: LetterItem): Action => ({
+export const updateScoreAction = (item) => ({
   type: UPDATE_SCORE,
   payload: item,
-  meta: {}
+  meta: {},
 });
