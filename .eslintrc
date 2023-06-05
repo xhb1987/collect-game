@@ -1,12 +1,9 @@
 {
-  "extends": "airbnb",
+  "plugins": ["react", "prettier"],
+  "extends": ["prettier"],
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "arrow-body-style": ["error", "as-needed"],
-    "arrow-parens": ["error", "as-needed"],
-    "comma-dangle": ["error", "never"],
-    "import/no-unresolved": [2, { "caseSensitive": false }],
     "linebreak-style": 0,
     "global-require": 0
   },
