@@ -1,4 +1,3 @@
-// @flow
 import React from "react";
 import HeaderTitle from "../component/header-title/header-title";
 import ScoreListContainer from "./score-list/score-list-container";
